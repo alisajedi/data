@@ -1,0 +1,13 @@
+#asker-answerer-graph
+data=as.matrix(data)  
+gplot(data)   
+
+#giant component
+install.packages("CINNA")
+a = read.csv(file = 'Desktop/ECE720/ECE720_A1/source_code/askerAnswerer.csv')
+g <- graph_from_data_frame(a, directed=TRUE, vertices=NULL)
+print(g)
+g_comp <- giant_component_extract(g, directed = TRUE, bipartite_proj= FALSE, num_proj = 1 )
+g_comp
+plot(g_comp[[1]])
+
