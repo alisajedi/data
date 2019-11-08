@@ -1,3 +1,0 @@
-
-data=as.matrix(data)
-gplot(data) 
